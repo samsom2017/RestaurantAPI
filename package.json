@@ -1,0 +1,23 @@
+{
+  "name": "restaurantapi-",
+  "version": "1.0.0",
+  "description": "RestaurantAPI",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samsom2017/RestaurantAPI.git"
+  },
+  "author": "Samsom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samsom2017/RestaurantAPI/issues"
+  },
+  "homepage": "https://github.com/samsom2017/RestaurantAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18"
+  }
+}
