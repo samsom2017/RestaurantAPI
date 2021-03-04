@@ -17,8 +17,12 @@ exports.restaurantList = (req, res) => {
     res.status(200).json({ item });
   });
 };
-
-// Get detailed information about a single restaurant
+/**
+ * Get detailed information about a single restaurant
+ * @param {*} req 
+ * @param {*} res 
+ */
+ 
 exports.restaurantInfo = (req, res) => {
   Restaurant.findOne({ id: req.params.id }, (err, item) => {
     if (err) {
@@ -32,8 +36,12 @@ exports.restaurantInfo = (req, res) => {
     res.status(200).json({ item });
   });
 };
+/**
+ * Add a new restaurant to the DB
+ * @param {*} req 
+ * @param {*} res 
+ */
 
-// Add a new restaurant to the DB
 exports.restaurantCreate = (req, res) => {
   Restaurant.create(req.body, (err, item) => {
     if (err) {
@@ -44,8 +52,12 @@ exports.restaurantCreate = (req, res) => {
     res.status(201).json({ item });
   });
 };
+/**
+ * Delete a restaurant from the DB
+ * @param {*} req 
+ * @param {*} res 
+ */
 
-// Delete a restaurant from the DB
 exports.restaurantDelete = (req, res) => {
   Restaurant.findOneAndRemove({ id: req.params.id }, (err, item) => {
     if (err) {
@@ -59,8 +71,12 @@ exports.restaurantDelete = (req, res) => {
     res.status(200).end();
   });
 };
+/**
+ * Update information about a restaurant
+ * @param {*} req 
+ * @param {*} res 
+ */
 
-// Update information about a restaurant
 exports.restaurantUpdate = (req, res) => {
   Restaurant.findOneAndUpdate(
     { id: req.params.id },
